@@ -39,6 +39,18 @@ body {
     background-color: var(--bg);
 }
 
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--main-color);
+}
+.btn:hover {
+    letter-spacing: .2rem;
+}
+
 .header {
     background-color: var(--bg);
     display: flex;
@@ -111,4 +123,88 @@ body {
 
 .header .search-form label:hover {
     color: var(--main-color);
+}
+
+.header .cart-items-container {
+    position: absolute;
+    top: 100%;
+    right : -100%;
+    height: calc(100vh - 9.5rem);
+    width: 35rem;
+    background-color: #fff;
+    padding: 0 1.5rem;
+}
+
+.header .cart-items-container .cart-item {
+    position: relative;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.header .cart-items-container .cart-item .fa-times {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--black);
+}
+
+.header .cart-items-container .cart-item .fa-times:hover {
+    color: var(--main-color);
+}
+
+.header .cart-items-container .cart-item img {
+    height: 7rem;
+
+}
+.header .cart-items-container .cart-item .content h3 {
+    font-size: 2rem;
+    color: var(--black);
+    padding-bottom: .5rem;
+}
+.header .cart-items-container .cart-item .content .price {
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+
+.header .cart-items-container .btn {
+    width: 100%;
+    text-align: center;
+}
+
+/* media queries */
+@media (max-width:991px) {
+
+    html {
+        font-size: 55%;
+    }
+    .header {
+        padding: 1.5rem 2re;
+    }
+}
+
+@media (max-width:991px) {
+
+    #menu-btn {
+        display: inline ;
+    }
+    .header .navbar {
+        position: absolute;
+        top : 100%;
+        right: -100%;
+        background-color: #fff;
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+    }
+
+    .header .navbar a {
+        color: var(--black);
+        display: block;
+        margin: 1.5rem;
+        padding: .5rem;
+        font-size: 2rem;
+    }
 }
